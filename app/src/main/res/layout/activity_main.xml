@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F11"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/sortingHat"
+        android:layout_width="124dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sortinghat" />
+
+    <ImageView
+        android:id="@+id/questionImage"
+        android:layout_width="320dp"
+        android:layout_height="225dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortingHat"
+        app:srcCompat="@drawable/ui_1_art" />
+
+    <ImageView
+        android:id="@+id/choices"
+        android:layout_width="348dp"
+        android:layout_height="185dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionImage"
+        app:layout_constraintVertical_bias="0.888"
+        app:srcCompat="@drawable/choices" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/felixti"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#F0D819"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/choices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionImage" />
+
+    <ImageButton
+        android:id="@+id/buttonA"
+        android:layout_width="148dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="12dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="@+id/choices"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="@+id/choices"
+        app:layout_constraintTop_toTopOf="@+id/choices"
+        app:srcCompat="@drawable/invisible_button" />
+
+    <ImageButton
+        android:id="@+id/buttonB"
+        android:layout_width="148dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="12dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="@+id/choices"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/choices"
+        app:layout_constraintTop_toTopOf="@+id/choices"
+        app:srcCompat="@drawable/invisible_button" />
+
+    <ImageButton
+        android:id="@+id/buttonC"
+        android:layout_width="149dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="12dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@+id/choices"
+        app:layout_constraintEnd_toEndOf="@+id/choices"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="@+id/choices"
+        app:srcCompat="@drawable/invisible_button" />
+
+    <ImageButton
+        android:id="@+id/buttonD"
+        android:layout_width="148dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="12dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="@+id/choices"
+        app:layout_constraintEnd_toEndOf="@+id/choices"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/choices"
+        app:srcCompat="@drawable/invisible_button" />
+
+    <TextView
+        android:id="@+id/choiceA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baskvill"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#F0D819"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonA"
+        app:layout_constraintEnd_toEndOf="@+id/buttonA"
+        app:layout_constraintStart_toStartOf="@+id/buttonA"
+        app:layout_constraintTop_toTopOf="@+id/buttonA" />
+
+    <TextView
+        android:id="@+id/choiceB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baskvill"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#F0D819"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonB"
+        app:layout_constraintEnd_toEndOf="@+id/buttonB"
+        app:layout_constraintStart_toStartOf="@+id/buttonB"
+        app:layout_constraintTop_toTopOf="@+id/buttonB" />
+
+    <TextView
+        android:id="@+id/choiceC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baskvill"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#F0D819"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonC"
+        app:layout_constraintEnd_toEndOf="@+id/buttonC"
+        app:layout_constraintStart_toStartOf="@+id/buttonC"
+        app:layout_constraintTop_toTopOf="@+id/buttonC" />
+
+    <TextView
+        android:id="@+id/choiceD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baskvill"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#F0D819"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonD"
+        app:layout_constraintEnd_toEndOf="@+id/buttonD"
+        app:layout_constraintStart_toStartOf="@+id/buttonD"
+        app:layout_constraintTop_toTopOf="@+id/buttonD" />
+</androidx.constraintlayout.widget.ConstraintLayout>
