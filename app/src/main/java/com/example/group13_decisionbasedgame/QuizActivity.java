@@ -97,6 +97,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    //sets animation for 'back'
+    public void onBackPressed(){
+        super.onBackPressed();
+        overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
+    }
+
     //computes house score for choice A
     public void setHouseScoreA(){
         if (a == "Gryffindor"){

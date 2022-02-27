@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void startQuiz(){
         Intent i = new Intent(this, QuizActivity.class);
         startActivity(i);
+        overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
     }
 
     @Override
