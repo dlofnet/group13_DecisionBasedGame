@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,7 +15,7 @@ import android.widget.TextView;
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageButton buttonA, buttonB, buttonC, buttonD;
-    ImageView questionImage;
+    ImageView questionImage, choices;
     TextView question, choiceA, choiceB, choiceC, choiceD;
 
     int questionNum = 1;
@@ -34,14 +36,14 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_quiz);
 
-
-        //initialize
+        //initialize variables
         questionImage = findViewById(R.id.questionImage);
         question = findViewById(R.id.question);
         choiceA = findViewById(R.id.choiceA);
         choiceB = findViewById(R.id.choiceB);
         choiceC = findViewById(R.id.choiceC);
         choiceD = findViewById(R.id.choiceD);
+        choices = findViewById(R.id.choices);
         buttonA = findViewById(R.id.buttonA);
         buttonB = findViewById(R.id.buttonB);
         buttonC = findViewById(R.id.buttonC);
@@ -64,12 +66,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                     "from within the Forbidden Forest... \n" +
                     "Would you dare approach it? ");
 
+            questionImage.setImageResource(R.drawable.ui_1_art);
+
             choiceA.setText("Maybe, if I am not alone.");
             choiceB.setText("No! I don’t break \n school rules.");
             choiceC.setText("Yes, its power might \n be useful.");
             choiceD.setText("Yes, it must be investigated \n at once.");
-
-            questionImage.setImageResource(R.drawable.ui_1_art);
 
             a = "Hufflepuff";
             b = "Ravenclaw";
@@ -81,7 +83,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
             question.setText("The students of Hogwarts start a food\n " +
                     "fight inside the Great Hall. \n" +
-                    "Do you participate? ");
+                    "Do you participate?");
 
             choiceA.setText("No, it is a waste of time \n and effort.");
             choiceB.setText("No, I’m starving.");
@@ -95,6 +97,42 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             c = "Gryffindor";
             d = "Hufflepuff";
         }
+        if (questionNum == 3) {
+
+            question.setText("You are tasked to brew a potion of your \n" +
+                    "choice during Potions class. \n" +
+                    "Which one would you make?");
+
+            choiceA.setText("Veritaserum\n(liquid luck)");
+            choiceB.setText("Amortentia\n(love potion)");
+            choiceC.setText("Antidote to\ncommon poisons");
+            choiceD.setText("Alihotsy Draught\n(causes laughter)");
+
+            questionImage.setImageResource(R.drawable.ui_3_art);
+
+            a = "Slytherin";
+            b = "Hufflepuff";
+            c = "Ravenclaw";
+            d = "Gryffindor";
+        }
+        if (questionNum == 4) {
+
+            question.setText("On the Hogwarts train, the food trolley \n" +
+                    "lady approaches. What snack \n" +
+                    "would you buy? ");
+
+            choiceA.setText("Bertie Bott’s\nEvery Flavour Beans");
+            choiceB.setText("Pumpkin Pasties");
+            choiceC.setText("Chocolate Frogs");
+            choiceD.setText("Licorice Wands");
+
+            questionImage.setImageResource(R.drawable.ui_4_art);
+
+            a = "Gryffindor";
+            b = "Hufflepuff";
+            c = "Ravenclaw";
+            d = "Slytherin";
+        }
     }
 
     //sets animation for 'back'
@@ -103,6 +141,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
     }
 
+    //following methods are for house computation
     //computes house score for choice A
     public void setHouseScoreA(){
         if (a == "Gryffindor"){
