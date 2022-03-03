@@ -2,6 +2,7 @@ package com.example.group13_decisionbasedgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -45,5 +46,16 @@ public class HouseReveal extends AppCompatActivity {
         } if (finalScore < 13) {
             hogwartsHouse.setText("Gryffindor ");
         }
+    }
+
+    //sets animation for 'back'
+    public void onBackPressed(){
+        super.onBackPressed();
+
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+
+        overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
+        overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
     }
 }

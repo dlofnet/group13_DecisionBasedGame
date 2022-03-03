@@ -99,8 +99,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
         if (questionNum == 3) {
 
-            question.setText("You are tasked to brew a potion of your \n" +
-                    "choice during Potions class. \n" +
+            question.setText("You are tasked to brew a potion of \n " +
+                    "your choice during Potions class. \n" +
                     "Which one would you make?");
             choiceA.setText("Veritaserum\n(liquid luck)");
             choiceB.setText("Amortentia\n(love potion)");
@@ -154,9 +154,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                     "you are a witch or a wizard. \n" +
                     "What would you do?");
             choiceA.setText("Ask what makes them \n think so.");
-            choiceB.setText("Agree, and ask whether \n they’d like a sample \n of a jinx");
-            choiceC.setText("Agree and walk away, leaving \n them to wonder whether \n you are bluffing");
-            choiceD.setText("Tell them that you are worried \n about their mental health, and \n offer to call a doctor ");
+            choiceB.setText("Agree, and ask whether \n they’d like a jinx.");
+            choiceC.setText("Agree and walk away, leaving \n them to wonder whether \n you are bluffing.");
+            choiceD.setText("Tell them that you are \nworried about their \nmental health.");
             questionImage.setImageResource(R.drawable.in_the_meantime);
             a = "Hufflepuff";
             b = "Gryffindor";
@@ -167,13 +167,13 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
         if (questionNum == 7) {
 
-            question.setText("You and two friends need to cross a bridge guarded by a river troll" +
-                    " who insists on fighting one of you before he" +
-                    " will let all of you pass. What would you do? ");
-            choiceA.setText("Attempt to confuse the troll \n into letting all of you  \n pass without fighting");
-            choiceB.setText("Suggest drawing lots to \n decide which of you will fight");
+            question.setText("You and two friends need to cross a bridge guarded by a troll" +
+                    " who insists on fighting someone before he" +
+                    " will let you pass. What would you do? ");
+            choiceA.setText("Attempt to confuse the troll \n into letting all of you  \n pass without fighting.");
+            choiceB.setText("Suggest drawing lots.");
             choiceC.setText("Suggest that all of you \n should fight \n (without telling the troll)");
-            choiceD.setText("Volunteer to fight");
+            choiceD.setText("Volunteer to fight.");
             questionImage.setImageResource(R.drawable.in_the_meantime);
             a = "Ravenclaw";
             b = "Hufflepuff";
@@ -184,18 +184,18 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
         if (questionNum == 8) {
 
-            question.setText("At the end of a dark hallway, \n" +
-                    "you hear a low grumbling sound… \n" +
-                    "What would you do?");
-            choiceA.setText("Draw out my wand and \n approach the sound.");
-            choiceB.setText("Leave it be.");
-            choiceC.setText("Report it to prefects or \n professors immediately.");
-            choiceD.setText("Choose a different route and \n warn other students.");
+            question.setText("A classmate has cheated in an exam by \n " +
+                    "using a Self-Spelling Quill. A professor \n" +
+                    "asks you about this. What would you do?");
+            choiceA.setText("Lie and say you don’t know.");
+            choiceB.setText("Tell the professor to \n ask someone else \n (but tell the truth if they lie)");
+            choiceC.setText("Tell the professor \n the truth.");
+            choiceD.setText("You will not wait \n to be asked.");
             questionImage.setImageResource(R.drawable.in_the_meantime);
-            a = "Gryffindor";
-            b = "Slytherin";
+            a = "Hufflepuff";
+            b = "Gryffindor";
             c = "Ravenclaw";
-            d = "Hufflepuff";
+            d = "Slytherin";
             fade();
         }
 
