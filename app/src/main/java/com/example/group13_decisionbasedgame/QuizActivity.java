@@ -13,6 +13,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.group13_decisionbasedgame.R;
+import com.example.group13_decisionbasedgame.Score;
+
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageButton buttonA, buttonB, buttonC, buttonD;
@@ -157,7 +160,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             choiceB.setText("Agree, and ask whether \n they’d like a jinx.");
             choiceC.setText("Agree and walk away, leaving \n them to wonder whether \n you are bluffing.");
             choiceD.setText("Tell them that you are \nworried about their \nmental health.");
-            questionImage.setImageResource(R.drawable.in_the_meantime);
+            questionImage.setImageResource(R.drawable.ui_6_art);
             a = "Hufflepuff";
             b = "Gryffindor";
             c = "Slytherin";
@@ -174,7 +177,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             choiceB.setText("Suggest drawing lots.");
             choiceC.setText("Suggest that all of you \n should fight \n (without telling the troll)");
             choiceD.setText("Volunteer to fight.");
-            questionImage.setImageResource(R.drawable.in_the_meantime);
+            questionImage.setImageResource(R.drawable.ui_7_art);
             a = "Ravenclaw";
             b = "Hufflepuff";
             c = "Slytherin";
@@ -191,7 +194,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             choiceB.setText("Tell the professor to \n ask someone else \n (but tell the truth if they lie)");
             choiceC.setText("Tell the professor \n the truth.");
             choiceD.setText("You will not wait \n to be asked.");
-            questionImage.setImageResource(R.drawable.in_the_meantime);
+            questionImage.setImageResource(R.drawable.ui_8_art);
             a = "Hufflepuff";
             b = "Gryffindor";
             c = "Ravenclaw";
@@ -208,7 +211,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             choiceB.setText("Successfully being able to \n finish what you have been \n working on");
             choiceC.setText("Being surrounded by your \n favorite foods and snacks");
             choiceD.setText("Teasing your loved ones");
-            questionImage.setImageResource(R.drawable.in_the_meantime);
+            questionImage.setImageResource(R.drawable.ui_9_art);
             a = "Hufflepuff";
             b = "Ravenclaw";
             c = "Gryffindor";
