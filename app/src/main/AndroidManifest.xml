@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Group13_DecisionBasedGame">
         <activity
-            android:name=".HouseReveal"
+            android:name=".SlytherinHouse"
+            android:exported="false" />
+        <activity
+            android:name=".HufflepuffHouse"
+            android:exported="false" />
+        <activity
+            android:name=".RavenclawHouse"
+            android:exported="false" />
+        <activity
+            android:name=".GryffindorHouse"
             android:exported="false" />
         <activity
             android:name=".QuizActivity"

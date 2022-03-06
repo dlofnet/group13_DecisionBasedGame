@@ -13,9 +13,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.group13_decisionbasedgame.R;
-import com.example.group13_decisionbasedgame.Score;
-
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageButton buttonA, buttonB, buttonC, buttonD;
@@ -23,7 +20,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     TextView question, choiceA, choiceB, choiceC, choiceD;
 
     int questionNum = 1;
-    int houseScore = 0;
+    int houseScore;
     String a;
     String b;
     String c;
@@ -61,9 +58,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
         setQuestion();
     }
-
-    //House Score register
-    Score score = new Score();
 
     //this method sets the question
     public void setQuestion(){
@@ -220,13 +214,16 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (questionNum == 10) {
-            /////////////////this is a problem, tho I think it's supposed to work
-            score.setPlayerHouse(houseScore);
-            /////////////////since the houseScore is computed through each click (choices),
-            ///////////////// setPlayerHouse should be able to send the final computation to the Score Class
-
-            //house reveal method is for opening new activity
-            houseReveal();
+            //condition for the player's House Reveal
+            if (houseScore < 37) {
+                houseRevealSlytherin();
+            } if (houseScore < 31) {
+                houseRevealRavenclaw();
+            } if (houseScore < 22) {
+                houseRevealHufflepuff();
+            } if (houseScore < 13) {
+                houseRevealGryffindor();
+            }
         }
     }
 
@@ -294,8 +291,26 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     //leads to House Reveal
-    public void houseReveal(){
-        Intent i = new Intent(this, HouseReveal.class);
+    public void houseRevealGryffindor(){
+        Intent i = new Intent(this, GryffindorHouse.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
+    }
+
+    public void houseRevealRavenclaw(){
+        Intent i = new Intent(this, RavenclawHouse.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
+    }
+
+    public void houseRevealHufflepuff(){
+        Intent i = new Intent(this, HufflepuffHouse.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
+    }
+
+    public void houseRevealSlytherin(){
+        Intent i = new Intent(this, SlytherinHouse.class);
         startActivity(i);
         overridePendingTransition(R.anim.intent_fade_in, R.anim.intent_fade_out);
     }
