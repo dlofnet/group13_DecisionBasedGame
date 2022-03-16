@@ -316,7 +316,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     //applies fade before new question
-    /////////////////    I only know how to do fade in animation
     public void fade(){
         Animation animIn = AnimationUtils.loadAnimation(this, R.anim.intent_fade_in);
         questionImage.setAnimation(animIn);

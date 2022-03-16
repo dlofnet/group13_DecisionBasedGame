@@ -13,9 +13,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageView imgBegin;
-    TextView txtBegin;
-
-    //QuizActivity score = new QuizActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //set listener
         imgBegin.setOnClickListener(this);
-
-        //txtBegin.setText(String.valueOf(score.getHouse()));
     }
 
     public void startQuiz(){

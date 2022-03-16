@@ -15,9 +15,6 @@ public class RavenclawHouse extends AppCompatActivity {
     TextView hogwartsHouse;
     ImageView houseBanner;
 
-    ///////////////// problem here: instead of showing fully computed score,
-    ///////////////// getPlayerHouse() just returns '0'
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
